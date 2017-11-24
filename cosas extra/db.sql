@@ -64,5 +64,5 @@ CREATE TABLE tbl_mensaje_general(
 
 INSERT INTO `tbl_usuario` (`id_usuario`, `email`, `password`, `nombre_completo`, `tipo`) VALUES
 (2, 'bufetealvarado@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Bufete Alvarado', 'admin'),
-(4, 'gomezlopez.jorge96@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Jorge Alberto G.', 'user'),
+(4, 'usuario1@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Jorge Alberto G.', 'user'),
 (5, 'data2@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Empleado 1', 'emp');
