@@ -61,3 +61,8 @@ CREATE TABLE tbl_mensaje_general(
 	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario),
 	FOREIGN KEY (id_chat_general) REFERENCES tbl_chat_general(id_chat_general)
 );
+
+INSERT INTO `tbl_usuario` (`id_usuario`, `email`, `password`, `nombre_completo`, `tipo`) VALUES
+(2, 'bufetealvarado@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Bufete Alvarado', 'admin'),
+(4, 'gomezlopez.jorge96@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Jorge Alberto G.', 'user'),
+(5, 'data2@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Empleado 1', 'emp');
