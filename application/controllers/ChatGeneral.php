@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 ////////////////////////////////////TIPO: Pagina Usuario comun ////////////////////
-class ChatGeneral_model extends CI_Controller {
+class ChatGeneral extends CI_Controller {
 
     public function __construct()
     {
