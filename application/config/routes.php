@@ -61,3 +61,8 @@ $route['editarusuario/index/(:any)'] = 'editarusuario/index/$1';
 $route['editarcasoadmin/index/(:any)'] = 'editarcasoadmin/index/$1';
 $route['espacioempleado/index/(:any)'] = 'espacioempleado/index/$1';
 $route['chatusuario/index/(:any)'] = 'chatusuario/index/$1';
+
+$route['eliminarusuario/index/(:any)'] = 'eliminarusuario/index/$1';
+$route['eliminarcaso/index/(:any)'] = 'eliminarcaso/index/$1';
+$route['eliminarpagoemp/index/(:any)'] = 'eliminarpagoemp/index/$1';
+$route['eliminarpagoadmin/index/(:any)'] = 'eliminarpagoadmin/index/$1';

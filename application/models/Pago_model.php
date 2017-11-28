@@ -82,4 +82,9 @@ class Pago_model extends CI_Model {
         }
         return false;
 	}
+	
+	public function eliminar_pago($id_pago)
+	{
+		$this->db->delete('tbl_pago', array('id_pago' => $id_pago));
+	}
 }

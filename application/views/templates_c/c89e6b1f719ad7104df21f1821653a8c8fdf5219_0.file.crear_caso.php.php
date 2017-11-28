@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-20 15:09:28
+/* Smarty version 3.1.30, created on 2017-11-28 00:26:37
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\crear_caso.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a12f028964287_84361110',
+  'unifunc' => 'content_5a1cad3d38f5d3_25519987',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c89e6b1f719ad7104df21f1821653a8c8fdf5219' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\crear_caso.php',
-      1 => 1511190258,
+      1 => 1511828786,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a12f028964287_84361110 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cad3d38f5d3_25519987 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a12f028964287_84361110 (Smarty_Internal_Template $_smarty_tpl)
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Crear Caso asesoria</title>
+        <title>Tramites legales - bufete alvarado</title>
         <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
@@ -50,15 +50,14 @@ font-awesome/css/font-awesome.min.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
 				<div id="navbar1" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a class="font-big" href="/tpiencuesta/index.php/inicio">Inicio</a></li>
-						<li><a class="font-big" href="/tpiencuesta/index.php/logout">Cerrar sesión</a></li>
+						<li class="active"><a class="font-big" href="/tpibufete/index.php/espaciousuario/index">Inicio</a></li>
+						<li><a class="font-big" href="/tpibufete/index.php/logout">Cerrar sesión</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

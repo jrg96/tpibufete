@@ -81,6 +81,15 @@ class EditarUsuario extends CI_Controller {
 		$tipo = $this->input->post('tipo_usuario', TRUE);
 		$id_usuario = $this->input->post('id_usuario', TRUE);
 		
+		///////////////////////// Validacion ded datos //////////////////////////
+		if (empty($nombre) || empty($id_usuario) || empty($tipo))
+		{
+			$valido = false;
+			
+			$this->session->set_userdata('resultado_operacion','error');
+			$this->session->set_userdata('mensaje_operacion','Rellene los campos por favor');
+		}
+		
 		///////////////////////// Ejecucion de consultas ////////////////////////
 		if ($valido)
 		{

@@ -90,6 +90,14 @@ class ChatGeneral extends CI_Controller {
 		/////////////////////////// Obtener datos de la DB ///////////////////////
 		$chat_general = $this->ChatGeneral_model->obtener_datos_chat_general($id_usuario);
 		
+		/////////////////////////// Validacion de datos //////////////////////////
+		if (empty($texto_mensaje))
+		{
+			$valido = false;
+			
+			$this->session->set_userdata('resultado_operacion','error');
+			$this->session->set_userdata('mensaje_operacion','Rellene todos los campos por favor');
+		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
 		if ($valido)

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="{$base_url}bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="{$base_url}css/style.css" rel="stylesheet">
     <link href="{$base_url}font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -24,8 +24,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
@@ -175,7 +174,7 @@
                                     <th><center>{$usuario.nombre_completo}</center></th>
                                     <th><center>{$usuario.tipo}</center></th>
 									<th><center><a href="/tpibufete/index.php/editarusuario/index/{$usuario.id_usuario}">Modificar</a></center></th>
-									<th><center>Eliminar</center></th>
+									<th><center><center><a href="/tpibufete/index.php/eliminarusuario/index/{$usuario.id_usuario}">Eliminar</a></center></center></th>
                                 </tr>
                                 {/foreach}
                             </tbody>

@@ -81,13 +81,14 @@ class CrearUsuario extends CI_Controller {
 		$tipo = $this->input->post('tipo_usuario', TRUE);
 		
 		////////////////////////// Validacion de datos ///////////////////////////
-		if (($pwd == $repetir) && !$this->Usuario_model->usuario_ya_existe($email))
+		if (empty($email) || empty($nombre) || empty($pwd) || empty($repetir) || empty($tipo))
 		{
-			$valido = true;
-			$this->session->set_userdata('resultado_operacion','exito');
-			$this->session->set_userdata('mensaje_operacion','La creacion ha sido realizada con exito');
+			$valido = false;
+			$this->session->set_userdata('resultado_operacion','error');
+			$this->session->set_userdata('mensaje_operacion','Rellene todos los campos por favor');
 		}
-		else
+		
+		if (($pwd != $repetir) || $this->Usuario_model->usuario_ya_existe($email))
 		{
 			$valido = false;
 			$this->session->set_userdata('resultado_operacion','error');
@@ -104,6 +105,9 @@ class CrearUsuario extends CI_Controller {
 				$usuario = $this->Usuario_model->obtener_usuario($email);
 				$this->ChatGeneral_model->insertar_chat_general($usuario['id_usuario']);
 			}
+			
+			$this->session->set_userdata('resultado_operacion','exito');
+			$this->session->set_userdata('mensaje_operacion','Usuario creado con exito');
 		}
 		
 		redirect('/crearusuario/index');

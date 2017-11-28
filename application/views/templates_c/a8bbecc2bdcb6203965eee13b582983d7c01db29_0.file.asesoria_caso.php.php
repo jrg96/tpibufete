@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-23 19:05:21
+/* Smarty version 3.1.30, created on 2017-11-28 00:27:28
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\asesoria_caso.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a171bf14c7120_33673776',
+  'unifunc' => 'content_5a1cad70e9be44_23377967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a8bbecc2bdcb6203965eee13b582983d7c01db29' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\asesoria_caso.php',
-      1 => 1511463498,
+      1 => 1511826928,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a171bf14c7120_33673776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cad70e9be44_23377967 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a171bf14c7120_33673776 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
@@ -49,8 +49,7 @@ css/chat_style.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				

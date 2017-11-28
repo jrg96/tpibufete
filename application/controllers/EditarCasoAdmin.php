@@ -84,11 +84,11 @@ class EditarCasoAdmin extends CI_Controller {
 		$nombre_caso = $this->input->post('nombre_caso', TRUE);
 		
 		/////////////////////////// Validacion de datos //////////////////////////
-		if (empty($estado_caso))
+		if (empty($estado_caso) || empty($id_caso) || empty($atendido_por) || empty($nombre_caso))
 		{
 			$valido = false;
 			$this->session->set_userdata('resultado_operacion','error');
-			$this->session->set_userdata('mensaje_operacion','No puede haber datose en blanco');
+			$this->session->set_userdata('mensaje_operacion','No puede haber datos en blanco');
 		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
@@ -114,6 +114,14 @@ class EditarCasoAdmin extends CI_Controller {
 		$nombre_servicio = $this->input->post('item_cargado', TRUE);
 		$descripcion_pago = $this->input->post('razon_pago', TRUE);
 		
+		/////////////////////////// Validacion datos /////////////////////////////
+		if (empty($id_caso) || empty($monto) || empty($nombre_servicio) || empty($descripcion_pago) || floatval($monto) == 0.0)
+		{
+			$valido = false;
+			
+			$this->session->set_userdata('resultado_operacion','Error');
+			$this->session->set_userdata('mensaje_operacion','Rellene todos los campos por favor');
+		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
 		if ($valido)

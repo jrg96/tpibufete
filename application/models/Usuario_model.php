@@ -146,4 +146,9 @@ class Usuario_model extends CI_Model {
         }
         return false;
 	}
+	
+	public function eliminar_usuario($id_usuario)
+	{
+		$this->db->delete('tbl_usuario', array('id_usuario' => $id_usuario));
+	}
 }

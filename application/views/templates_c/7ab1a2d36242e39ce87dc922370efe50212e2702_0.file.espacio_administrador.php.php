@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-20 14:34:19
+/* Smarty version 3.1.30, created on 2017-11-28 00:27:52
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\espacio_administrador.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a12e7ebced094_83071746',
+  'unifunc' => 'content_5a1cad88b1e7c4_75018554',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ab1a2d36242e39ce87dc922370efe50212e2702' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\espacio_administrador.php',
-      1 => 1511188458,
+      1 => 1511827000,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a12e7ebced094_83071746 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cad88b1e7c4_75018554 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a12e7ebced094_83071746 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
   </head>
@@ -47,8 +47,7 @@ bootstrap/css/bootstrap.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				

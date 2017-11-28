@@ -28,7 +28,8 @@ class Caso_model extends CI_Model {
 	{
 		$this->db->select('*');
         $this->db->from('tbl_caso');
-		$this->db->where('id_usuario', $id_usuario);
+		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario');
+		$this->db->where('tbl_caso.id_usuario', $id_usuario);
 		$query = $this->db->get()->result_array();
 		
 		return $query;
@@ -37,12 +38,13 @@ class Caso_model extends CI_Model {
 	public function obtener_caso_porempleado($id_usuario, $estado)
 	{
 		$condicion = array(
-			'atendido_por' => $id_usuario,
-			'estado' => $estado
+			'tbl_caso.atendido_por' => $id_usuario,
+			'tbl_caso.estado' => $estado
 		);
 		
 		$this->db->select('*');
         $this->db->from('tbl_caso');
+		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario');
 		$this->db->where($condicion);
 		$query = $this->db->get()->result_array();
 		
@@ -106,5 +108,10 @@ class Caso_model extends CI_Model {
             return true;
         }
         return false;
+	}
+	
+	public function eliminar_caso($id_caso)
+	{
+		$this->db->delete('tbl_caso', array('id_caso' => $id_caso));
 	}
 }

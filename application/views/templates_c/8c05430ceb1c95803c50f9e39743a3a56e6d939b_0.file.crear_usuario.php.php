@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-23 00:00:26
+/* Smarty version 3.1.30, created on 2017-11-28 00:56:58
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\crear_usuario.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a160f9a753bf4_73808366',
+  'unifunc' => 'content_5a1cb45a0d21b9_21935001',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c05430ceb1c95803c50f9e39743a3a56e6d939b' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\crear_usuario.php',
-      1 => 1511188598,
+      1 => 1511830616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a160f9a753bf4_73808366 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cb45a0d21b9_21935001 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a160f9a753bf4_73808366 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
 	<link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
@@ -51,8 +51,7 @@ font-awesome/css/font-awesome.min.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
@@ -212,7 +211,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->value) {
 </center></th>
 									<th><center><a href="/tpibufete/index.php/editarusuario/index/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 ">Modificar</a></center></th>
-									<th><center>Eliminar</center></th>
+									<th><center><center><a href="/tpibufete/index.php/eliminarusuario/index/<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+">Eliminar</a></center></center></th>
                                 </tr>
                                 <?php
 }

@@ -89,6 +89,14 @@ class AtenderCaso extends CI_Controller {
 		$nombre_servicio = $this->input->post('item_cargado', TRUE);
 		$descripcion_pago = $this->input->post('razon_pago', TRUE);
 		
+		/////////////////////////// Validacion datos /////////////////////////////
+		if (empty($id_caso) || empty($monto) || empty($nombre_servicio) || empty($descripcion_pago) || floatval($monto) == 0.0)
+		{
+			$valido = false;
+			
+			$this->session->set_userdata('resultado_operacion','Error');
+			$this->session->set_userdata('mensaje_operacion','Rellene todos los campos por favor');
+		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
 		if ($valido)
@@ -112,6 +120,14 @@ class AtenderCaso extends CI_Controller {
 		$id_caso = $this->input->post('id_caso', TRUE);
 		$texto_mensaje = $this->input->post('texto_mensaje', TRUE);
 		
+		/////////////////////////// Validacion de datos //////////////////////////
+		if (empty($id_usuario) || empty($id_caso) || empty($id_caso) || empty($texto_mensaje))
+		{
+			$valido = false;
+			
+			$this->session->set_userdata('resultado_operacion','Error');
+			$this->session->set_userdata('mensaje_operacion','Favor llenar todos los campos');
+		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
 		if ($valido)

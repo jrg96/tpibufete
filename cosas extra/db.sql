@@ -15,8 +15,8 @@ CREATE TABLE tbl_caso(
 	nombre_caso VARCHAR(200),
 	estado VARCHAR(50),
 	atendido_por INT,
-	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario),
-	FOREIGN KEY (atendido_por) REFERENCES tbl_usuario(id_usuario)
+	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario) ON DELETE CASCADE,
+	FOREIGN KEY (atendido_por) REFERENCES tbl_usuario(id_usuario) ON DELETE CASCADE
 );
 
 CREATE TABLE tbl_mensaje(
@@ -28,8 +28,8 @@ CREATE TABLE tbl_mensaje(
 	es_mensaje_archivo VARCHAR(10),
 	nombre_archivo_original VARCHAR(100),
 	nombre_archivo_encriptado VARCHAR(50),
-	FOREIGN KEY (id_caso) REFERENCES tbl_caso(id_caso),
-	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario)
+	FOREIGN KEY (id_caso) REFERENCES tbl_caso(id_caso) ON DELETE CASCADE,
+	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario) ON DELETE CASCADE
 );
 
 CREATE TABLE tbl_pago(
@@ -42,14 +42,14 @@ CREATE TABLE tbl_pago(
 	payment_id VARCHAR(50),
 	token VARCHAR(25),
 	payer_id VARCHAR(30),
-	FOREIGN KEY (id_caso) REFERENCES tbl_caso(id_caso)
+	FOREIGN KEY (id_caso) REFERENCES tbl_caso(id_caso) ON DELETE CASCADE
 );
 
 CREATE TABLE tbl_chat_general(
 	id_chat_general INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	id_usuario INT NOT NULL,
 	estado VARCHAR(50),
-	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario)
+	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario) ON DELETE CASCADE
 );
 
 CREATE TABLE tbl_mensaje_general(
@@ -58,11 +58,9 @@ CREATE TABLE tbl_mensaje_general(
 	id_usuario INT NOT NULL,
 	fecha_creacion DATETIME,
 	texto_mensaje VARCHAR(500),
-	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario),
-	FOREIGN KEY (id_chat_general) REFERENCES tbl_chat_general(id_chat_general)
+	FOREIGN KEY (id_usuario) REFERENCES tbl_usuario(id_usuario) ON DELETE CASCADE,
+	FOREIGN KEY (id_chat_general) REFERENCES tbl_chat_general(id_chat_general) ON DELETE CASCADE
 );
 
 INSERT INTO `tbl_usuario` (`id_usuario`, `email`, `password`, `nombre_completo`, `tipo`) VALUES
-(2, 'bufetealvarado@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Bufete Alvarado', 'admin'),
-(4, 'usuario1@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Jorge Alberto G.', 'user'),
-(5, 'data2@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Empleado 1', 'emp');
+(2, 'bufetealvarado@gmail.com', '2301c59cbdef6862ec9cb5935165d0de', 'Bufete Alvarado', 'admin');

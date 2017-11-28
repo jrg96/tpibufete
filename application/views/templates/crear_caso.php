@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Crear Caso asesoria</title>
+        <title>Tramites legales - bufete alvarado</title>
         <link href="{$base_url}bootstrap/css/bootstrap.css" rel="stylesheet">
 		<link href="{$base_url}css/style.css" rel="stylesheet">
 		<link href="{$base_url}font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -23,15 +23,14 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
 				<div id="navbar1" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a class="font-big" href="/tpiencuesta/index.php/inicio">Inicio</a></li>
-						<li><a class="font-big" href="/tpiencuesta/index.php/logout">Cerrar sesión</a></li>
+						<li class="active"><a class="font-big" href="/tpibufete/index.php/espaciousuario/index">Inicio</a></li>
+						<li><a class="font-big" href="/tpibufete/index.php/logout">Cerrar sesión</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->

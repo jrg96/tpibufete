@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-22 23:48:20
+/* Smarty version 3.1.30, created on 2017-11-28 01:30:01
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\espacio_cliente.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a160cc4d74ac0_72359069',
+  'unifunc' => 'content_5a1cbc194776c0_78905852',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '59d3ef791f1205dbec4c2ec1fb7afbb78db6fb7d' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\espacio_cliente.php',
-      1 => 1511394494,
+      1 => 1511832600,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a160cc4d74ac0_72359069 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cbc194776c0_78905852 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a160cc4d74ac0_72359069 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
   </head>
@@ -47,8 +47,7 @@ bootstrap/css/bootstrap.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
@@ -105,7 +104,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['caso']->value) {
 						<b> Estado: <?php echo $_smarty_tpl->tpl_vars['caso']->value['estado'];?>
 </b>
 						<br />
-						<b> Atendido por: <?php echo $_smarty_tpl->tpl_vars['caso']->value['atendido_por'];?>
+						<b> Atendido por: <?php echo $_smarty_tpl->tpl_vars['caso']->value['nombre_completo'];?>
 </b>
 					</div>
 					<div class="col-xs-4">

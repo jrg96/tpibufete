@@ -72,11 +72,11 @@ class CrearCaso extends CI_Controller {
 		$texto_mensaje = $this->input->post('texto_mensaje', TRUE);
 		
 		/////////////////////////// Validacion datos /////////////////////////////
-		if (empty($id_usuario) || empty($nombre_caso))
+		if (empty($id_usuario) || empty($nombre_caso) || empty($texto_mensaje))
 		{
 			$valido = false;
 			$this->session->set_userdata('resultado_operacion','error');
-			$this->session->set_userdata('mensaje_operacion','Credenciales no validos');
+			$this->session->set_userdata('mensaje_operacion','Rellene todos los campos por favor');
 		}
 		
 		/////////////////////////// Ejecucion de logica //////////////////////////
@@ -88,6 +88,6 @@ class CrearCaso extends CI_Controller {
 			$this->session->set_userdata('mensaje_operacion','La creacion ha sido realizada con exito');
 		}
 		
-		redirect('/espaciousuario/index');
+		redirect('/crearcaso/index');
 	}
 }

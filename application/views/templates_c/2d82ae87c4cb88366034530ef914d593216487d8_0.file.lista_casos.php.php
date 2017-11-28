@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-11-20 15:39:26
+/* Smarty version 3.1.30, created on 2017-11-28 01:04:56
   from "H:\tpi\USBWebserver v8.6\root\tpibufete\application\views\templates\lista_casos.php" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a12f72e254df8_47634594',
+  'unifunc' => 'content_5a1cb6381ae5f6_16057352',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d82ae87c4cb88366034530ef914d593216487d8' => 
     array (
       0 => 'H:\\tpi\\USBWebserver v8.6\\root\\tpibufete\\application\\views\\templates\\lista_casos.php',
-      1 => 1511192364,
+      1 => 1511831094,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a12f72e254df8_47634594 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a1cb6381ae5f6_16057352 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ function content_5a12f72e254df8_47634594 (Smarty_Internal_Template $_smarty_tpl)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema gestor de encuestas</title>
+    <title>Tramites legales - bufete alvarado</title>
     <link href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 bootstrap/css/bootstrap.css" rel="stylesheet">
   </head>
@@ -47,8 +47,7 @@ bootstrap/css/bootstrap.css" rel="stylesheet">
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-left navbar-brand navbar-logo" href="index.html">
-						<img src="" alt="Dispute Bills">
-						<a class="navbar-brand font-big" href="#">MiEncuesta</a>
+						<a class="navbar-brand font-big" href="/tpibufete/index.php/inicio">Bufete Alvarado</a>
 					</a>
 		        </div>
 				
@@ -101,7 +100,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['caso']->value) {
 </center></th>
 									<th><center><a href="/tpibufete/index.php/editarcasoadmin/index/<?php echo $_smarty_tpl->tpl_vars['caso']->value['id_caso'];?>
 ">Modificar</a></center></th>
-									<th><center>Eliminar</center></th>
+									<th><center><a href="/tpibufete/index.php/eliminarcaso/index/<?php echo $_smarty_tpl->tpl_vars['caso']->value['id_caso'];?>
+">Eliminar</a></center></th>
                                 </tr>
                                 <?php
 }
