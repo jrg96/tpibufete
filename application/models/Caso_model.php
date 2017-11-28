@@ -28,7 +28,7 @@ class Caso_model extends CI_Model {
 	{
 		$this->db->select('*');
         $this->db->from('tbl_caso');
-		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario');
+		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario', 'left');
 		$this->db->where('tbl_caso.id_usuario', $id_usuario);
 		$query = $this->db->get()->result_array();
 		
@@ -44,7 +44,7 @@ class Caso_model extends CI_Model {
 		
 		$this->db->select('*');
         $this->db->from('tbl_caso');
-		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario');
+		$this->db->join('tbl_usuario', 'tbl_caso.atendido_por = tbl_usuario.id_usuario', 'left');
 		$this->db->where($condicion);
 		$query = $this->db->get()->result_array();
 		
@@ -55,7 +55,7 @@ class Caso_model extends CI_Model {
 	{
 		$this->db->select('*');
         $this->db->from('tbl_caso');
-		$this->db->join('tbl_usuario', 'tbl_caso.id_usuario = tbl_usuario.id_usuario');
+		$this->db->join('tbl_usuario', 'tbl_caso.id_usuario = tbl_usuario.id_usuario', 'left');
 		$this->db->where('tbl_caso.estado', $estado);
 		
 		$query = $this->db->get()->result_array();
@@ -67,7 +67,7 @@ class Caso_model extends CI_Model {
 	{
 		$this->db->select('*');
         $this->db->from('tbl_caso');
-		$this->db->join('tbl_usuario', 'tbl_caso.id_usuario = tbl_usuario.id_usuario');
+		$this->db->join('tbl_usuario', 'tbl_caso.id_usuario = tbl_usuario.id_usuario', 'left');
 		$query = $this->db->get()->result_array();
 		
 		return $query;
